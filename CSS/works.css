@@ -1,0 +1,37 @@
+.card-container {
+    padding: 40px;
+}
+.filter-buttons {
+    padding-left: 20px;
+}
+
+.work-cards {
+    display: flex;
+    gap: 16pxS;
+    flex-wrap: wrap;
+}
+.card-title {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2px 6px;
+    margin-bottom: 16px;
+    color: rgb(15, 15, 15);
+    background-color: rgb(241, 239, 239);
+    display: inline-block;
+    border-radius: 2px;
+    
+    
+}
+.first-card {
+    background-color: rgb(124, 122, 122);
+    padding: 16px;
+    width: 200px;
+    height: 200px;
+}
+.card-content {
+    background-color: rgb(44, 43, 43);
+    width: 160px;
+    height: 115px;
+
+
+}
