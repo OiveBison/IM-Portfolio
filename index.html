@@ -3,60 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lindiwe Makiri | Creative Technologist Portfolio</title>
-    <link rel="stylesheet" href="CSS/main.css">
+    <title>Lindiwe Makiri | Web Portfolio</title>
+    <!-- Double check if your folder is named uppercase 'CSS' or lowercase 'css' -->
+    <link rel="stylesheet" href="CSS/main.css"> 
     <script src="js/main.js" defer></script>
 </head>
 <body class="body">
-                 <!--Navbar-->
-   <nav class="navbar home-page">
-            <div class="nav-container">
-                <div class="logo">
-                    <img src="assets/pic logo.png" alt="Hello Kitty logo" width="80px" height="80px"> <!--image logo-->
-                </div>
-                <!--Hamburger icon-->
-                  <!--Menu links-->
-            <div class="nav-buttons">
-                <button><a class="home" href="index.html">Home</a></button>
-                <button><a class="works" href="works.html">Works</a></button> 
-                <button><a class="about" href="about.html">About</a></button>
-                <button><a class="contact" href="contact.html">Contact</a></button>
-             </div>
-                    
-                    <!--Search icon-->
-                <svg class="search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                 <circle cx="11" cy="11" r="8"></circle>
-                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg> 
-                </div>
-            </div>
-          
-        </nav>
-  
 
+    <!--Navbar-->
+    <nav class="navbar home-page">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/pic logo.png" alt="Hello Kitty logo" width="80" height="80">
+            </div>
+            
+            <!-- Menu links (JavaScript dynamically injects links here) -->
+            <div class="nav-menu" id="global-nav">
+                <!-- If you aren't using JS to inject links yet, you can put your standard <a> tags here -->
+            </div>
+                    
+            <!--Search icon-->
+            <svg class="search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg> 
+        </div>
+    </nav>
+  
+    <!--Main Content-->
     <main>
         <!--Hero Section-->
         <section class="hero">
-           <div class="hero-content">
-            <h1 class="hero-description">
-                 Animation and Digital Theory 
-                <br>
-                 Meets Web Development! 
-            </h1>
-            <p hero-subtitle>I am a 3rd year IM student exploring animation
-                 principles in web development</p>
-                 <section class="Hero-image">
-                    <div> <img src="assets/pic logo.png" alt="hello kitty" width="240px" height="240px"></div>
-                    </section>
-                    <div class="hero-button">
-                       <button> <a href="works.html">View selected works</a></button>
-                    </div>
+            <div class="hero-content">
+                <h1 class="hero-description">
+                    Animation and Digital Theory <br> Meets Web Development!
+                </h1>
+                <p class="hero-subtitle">I am a 3rd year IM student exploring animation principles in web development</p>
+                
+                <div class="hero-button-container">
+                    <a href="works.html" class="hero-button">View selected works</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="assets/pic logo.png" alt="hello kitty" width="240" height="240">
+            </div>
+        </section>
     </main>
 
+    <!--Footer-->
     <footer class="bottom-footer">
-       <div>
-         <p>&copy; 2026 | Built with Rule 3: Content before Chrome</p>
-       </div>
+        <div>
+            <p>&copy;  2026 | Built by Lindiwe Makiri</p>
+        </div>
     </footer>
 
 </body>

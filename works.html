@@ -3,50 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Works Page</title>
+    <title>Lindiwe Makiri | My Work</title>
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="CSS/works.css">
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </head>
-<!--navigation-->
 <body class="body">
-     <nav class="navbar about-page">
+
+    <nav class="navbar">
         <div class="nav-container">
-            <div class="logo"><img src="assets/pic logo.png" alt="Hello Kitty" width="80px" height="80px"></div>
-              
-            <!--Hamburger icon-->
-           <div class="nav-buttons">
-                <button><a class="home" href="index.html">Home</a></button> 
-                <button><a class="works" href="works.html">Works</a></button>
-                <button><a class="about" href="about.html">About</a></button>
-                <button><a class="contact" href="contact.html">Contact</a></button>
-             </div>
-                    
-                    <!--Search icon-->
-                <svg class="search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                 <circle cx="11" cy="11" r="8"></circle>
-                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg> 
+            <div class="logo">
+                <img src="assets/lm_logo.png" alt="Logo" width="80" height="80">
+            </div>
+            
+            <div class="nav-menu" id="global-nav">
                 </div>
-            </div>
-    </nav>
-    <!--buttons-->
-    <section class="filter-buttons">
-        <button>All</button>
-        <button>Animation</button>
-        <button>Digital Art</button>
-    </section>
-    <!--cards-->
-    <section class="work-cards">
-        <div class="card-container">
-            <div class="first-card">
-                 <h3 class="card-title">Fireworks</h3>
-                 <div class="card-content"><img src="" alt="content"></div>
-                 
-            </div>
-           
         </div>
-       
-    </section>
+    </nav>
+
+    <main class="works-container">
+        
+        <header class="works-header">
+            <h2>My Digital Arts Projects</h2>
+            <p>Here is a look at what I have been working on in my courses.</p>
+        </header>
+
+        <section class="filter-section">
+            <button class="filter-btn" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="animation">Animation</button>
+            <button class="filter-btn" data-filter="development">Web Dev</button>
+            <button class="filter-btn" data-filter="theory">Theory</button>
+        </section>
+
+        <section class="works-grid">
+            
+            <article class="project-card animation">
+                <div class="card-media">
+                    <img src="assets/animation-demo.gif" alt="Bouncing ball">
+                </div>
+                <div class="card-info">
+                    <span class="project-category">Animation</span>
+                    <h3>Bouncing Ball Exercise</h3>
+                    <p>A practice project focusing on the principles of squash and stretch using animation curves.</p>
+                </div>
+            </article>
+
+            <article class="project-card development">
+                <div class="card-media">
+                    <img src="assets/lm_logo.png" alt="Portfolio screenshot">
+                </div>
+                <div class="card-info">
+                    <span class="project-category">Web Development</span>
+                    <h3>Personal Portfolio Website</h3>
+                    <p>Building a 4-page responsive website from scratch using HTML, CSS, and basic JavaScript.</p>
+                </div>
+            </article>
+
+            <article class="project-card theory">
+                <div class="card-media">
+                    <div class="media-placeholder">Theory Essay</div>
+                </div>
+                <div class="card-info">
+                    <span class="project-category">Digital Theory</span>
+                    <h3>Digital Transience Essay</h3>
+                    <p>A university theory essay analyzing digital art, stability, and technology.</p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="bottom-footer">
+        <div>
+            <p>&copy; 2026 | Built by Lindiwe Makiri</p>
+        </div>
+    </footer>
+
 </body>
 </html>

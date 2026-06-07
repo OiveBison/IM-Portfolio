@@ -3,35 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Page</title>
+    <title>Lindiwe Makiri | Contact Me</title>
     <link rel="stylesheet" href="CSS/main.css">
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="CSS/contact.css">
+    <script src="js/main.js" defer></script>
 </head>
-
 <body class="body">
-     <nav class="navbar about-page">
+
+    <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="assets/pic logo.png" alt="Hello Kitty" width="80px" height="80px">
+                <img src="assets/lm_logo.png" alt="Logo" width="80" height="80">
             </div>
-              
-            <!--Hamburger icon-->
-           <div class="nav-buttons">
-                <button><a class="home" href="index.html">Home</a></button> 
-                <button><a class="works" href="works.html">Works</a></button>
-                <button><a class="about" href="about.html">About</a></button>
-                <button><a class="contact" href="contact.html">Contact</a></button>
-             </div>
-                    
-                    <!--Search icon-->
-                <svg class="search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                 <circle cx="11" cy="11" r="8"></circle>
-                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg> 
+            
+            <div class="nav-menu" id="global-nav">
                 </div>
-            </div>
+        </div>
     </nav>
-    
-    
+
+    <main class="contact-container">
+        
+        <header class="contact-header">
+            <h2>Contact Me</h2>
+            <p>If you have any questions or want to get in touch, please fill out the form below.</p>
+        </header>
+
+        <div class="contact-layout">
+            <section class="form-section">
+                <form id="contactForm">
+                    <div id="error-message" class="error-text"></div>
+                    
+                    <div class="input-group">
+                        <label for="fullName">Name and Surname:</label>
+                        <input type="text" id="fullName" name="name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="emailInput">Email Address:</label>
+                        <input type="email" id="emailInput" name="email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="messageInput">Message:</label>
+                        <textarea id="messageInput" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+            </section>
+
+            <section class="connect-section">
+                <h3>My Profiles</h3>
+                <p>You can also find me on these platforms:</p>
+                
+                <ul class="social-list">
+                    <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="mailto:your.email@example.com">Email Me Directly</a></li>
+                </ul>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="bottom-footer">
+        <div>
+            <p>&copy; 2026 | Built by Lindiwe Makiri</p>
+        </div>
+    </footer>
+
 </body>
 </html>

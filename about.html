@@ -3,52 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Page</title>
+    <title>About Lindiwe | Creative Technologist</title>
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="CSS/about.css">
-    <script src="js/main.js"></script>
-    
+    <script src="js/main.js" defer></script>
 </head>
 <body class="body">
+
     <nav class="navbar about-page">
         <div class="nav-container">
             <div class="logo">
-                <img src="assets/pic logo.png" alt="Hello Kitty" width="80px" height="80px">
+                <img src="assets/lm_logo.png" alt="Lindiwe Makiri Logo" width="80" height="80">
             </div>
-              
-            <!--Hamburger icon-->
-                <!--Menu links-->
             
-                <div class="nav-buttons" >
-               <button><a class="home" href="index.html">Home</a></button>
-                <button><a class="works" href="works.html">Works</a></button> 
-                <button><a class="about" href="about.html">About</a></button>
-                <button><a class="contact" href="contact.html">Contact</a></button>
-                </div>
+            <div class="nav-menu" id="global-nav"></div>
 
-                 <svg class="search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                 <circle cx="11" cy="11" r="8"></circle>
-                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg> 
-         
-            </div>
-          
+            <svg class="search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg> 
         </div>
     </nav>
-<div class="welcome-text">
-    <!--Title-->
-    <h2>
-        BRAINS BEHIND THE WEB
-    </h2>
-    
-    <p>
-    We are a team of passionate individuals 
-    dedicated to providing high-quality content and services to our users.
-    <br>
-     Our mission is to create a platform that fosters creativity,
-      learning, and community engagement.
-</p>
-    
-</div>
+
+    <main class="about-container">
+        
+        <section class="about-bio">
+            <div class="welcome-text">
+                <h2>THE BRAIN BEHIND THE CODE</h2>
+                <p>
+                    I am a third-year Digital Arts student specializing in the intersection of interaction media, 
+                    user experience design, and front-end web development. Passionate about translating complex 
+                    theories into intuitive user interfaces, I focus on building semantic, accessible, and clean digital experiences.
+                </p>
+                <p>
+                    My design philosophy values utility and content structure before visual fluff, ensuring that 
+                    every line of code serves a deliberate purpose in enhancing human creativity and digital intuition.
+                </p>
+            </div>
+        </section>
+
+        <section class="about-skills">
+            <h3>Technical Toolkit</h3>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h4>Development</h4>
+                    <p>HTML5, CSS3, JavaScript (ES6)</p>
+                </article>
+                <article class="skill-card">
+                    <h4>Design & UI/UX</h4>
+                    <p>User Research, Wireframing, Interaction Design</p>
+                </article>
+                <article class="skill-card">
+                    <h4>3D & Digital Arts</h4>
+                    <p>Blender (Modeling & Animation), Krita, Digital Asset Creation</p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bottom-footer">
+        <div>
+            <p>&copy; 2026 | Built with Rule 3: Content before Chrome</p>
+        </div>
+    </footer>
+
 </body>
 </html>
