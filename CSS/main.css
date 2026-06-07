@@ -1,69 +1,129 @@
-*{
+/* 1. Global Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.body {
-    padding-top: 70px;
-    font-family: Helvetica, sans-serif;
-    background: #f4f4f4;
-    
+/* 2. Base Page Layout (Keeps footer stuck to bottom naturally) */
+html, body {
+    height: 100%;
 }
 
-/*keep nav-bar at top*/
+.body {
+    display: flex;
+    flex-direction: column;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333333;
+    padding-top: 80px; /* Leaves room for the fixed navbar */
+}
+
+/* Base text styling */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* 3. Global Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
 
 .nav-container {
     display: flex;
-    align-items: stretch;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px 20px;
 }
 
-/*Hero button responsive css*/
-
-button {
-    padding: 12px 30px;
-    border-radius: 20px;
-    font-size: 14px;
-    border-width: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
-   }
-.nav-buttons a {
-     text-decoration: none;
-     color: black ;
+/* Nav Menu Links */
+.nav-menu a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    margin-left: 20px;
 }
-a:hover {
+
+.nav-menu a:hover {
     text-decoration: underline;
 }
-.hero-button :hover {
-    text-decoration:underline ;
-}
-.hero {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-top: 0;
-}
-.hero-button a{
+
+/* 4. Global Button Styling */
+.hero-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #333333;
+    color: #ffffff;
     text-decoration: none;
-    color: black;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
 }
 
-.hero-description {
-    padding: 20px;
-    font-family: serif;
-    font-size: 30px;
-    font-style: normal;
-    line-height: 1.1;
-    color: rgb(44, 43, 43);
+.hero-button:hover {
+    background-color: #555555;
+    text-decoration: none;
 }
- p {
-    font-family: ;
-    font-size: bold ;
+
+/* 5. Mobile Hamburger Styles (Hidden on Desktop) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
 }
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333333;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 6. Unified Mobile Styles */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show menu icon on mobile */
+    }
+
+    .nav-menu {
+        display: none; /* Hide menu links by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* When JS triggers class switch */
+    .nav-menu.active {
+        display: flex;
+    }
+}
+
+/* 7. Global Footer Styling */
 .bottom-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+    margin-top: auto; /* Pushes the footer to the bottom of the viewport if content is short */
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    border-top: 1px solid #e0e0e0;
 }

@@ -1,0 +1,143 @@
+/* Container for the entire contact page */
+.contact-container {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-header h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* Flexbox Layout: Side-by-side on desktop */
+.contact-layout {
+    display: flex;
+    gap: 40px;
+}
+
+/* Left Side: Form section takes up more space */
+.form-section {
+    flex: 2;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #dddddd;
+}
+
+/* Form input spacing */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333333;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 11px; 
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.input-group textarea {
+    display: block; 
+    resize: vertical; /* to scale height but not break horizontal layout */
+}
+
+/*Change color when clicking inside the input boxes */
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: 2px solid #333333;
+}
+
+/* Submit Button */
+.submit-button {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: #555555;
+}
+
+/* Placeholder box fr JS error message text */
+.error-text {
+    color: #ff0000;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/*  Social connect links take up less space */
+.connect-section {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #dddddd;
+    height: fit-content; /* to make it take up space it needs */
+}
+
+.connect-section h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.connect-section p {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+/*  text link list styling */
+.social-list {
+    list-style: none;
+}
+
+.social-list li {
+    margin-bottom: 15px;
+}
+
+.social-list a {
+    text-decoration: none;
+    color: #0066cc;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.social-list a:hover {
+    text-decoration: underline;
+    color: #004499;
+}
+
+/* Responsive Rule: Stack columns on smaller tablet/mobile screens */
+@media screen and (max-width: 768px) {
+    .contact-layout {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

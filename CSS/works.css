@@ -1,37 +1,110 @@
-.card-container {
-    padding: 40px;
-}
-.filter-buttons {
-    padding-left: 20px;
+/* Container padding for the whole main area */
+.works-container {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.work-cards {
-    display: flex;
-    gap: 16pxS;
-    flex-wrap: wrap;
+.works-header {
+    text-align: center;
+    margin-bottom: 30px;
 }
-.card-title {
-    font-size: 12px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 2px 6px;
-    margin-bottom: 16px;
-    color: rgb(15, 15, 15);
-    background-color: rgb(241, 239, 239);
-    display: inline-block;
-    border-radius: 2px;
-    
-    
+
+.works-header h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
 }
-.first-card {
-    background-color: rgb(124, 122, 122);
+
+
+.works-container .filter-section {
+    text-align: center;
+    margin-bottom: 23px; /* Adjusted by eye */
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    margin: 0 5px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* THE GRID SYSTEM */
+.works-grid {
+    display: grid;
+    /* Automatically creates columns that fit the screen size nicely */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Project Cards */
+.project-card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    overflow: hidden; /* Keeps images cleanly inside the border radius */
     padding: 16px;
-    width: 200px;
-    height: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
-.card-content {
-    background-color: rgb(44, 43, 43);
-    width: 160px;
-    height: 115px;
 
+/* Media inside Card */
+.card-media {
+    background-color: #e0e0e0;
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 4px;
+}
 
+.card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures screenshots don't stretch weirdly */
+}
+
+/* Text Container Inside Card */
+.card-info {
+    padding-top: 15px;
+}
+
+.project-category {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #777777;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.project-card h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    /* Rookie oversight: Duplicate color declaration */
+    color: #111111;
+    color: #151515; 
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.4;
+}
+
+/* Placeholder box for things without images yet */
+.media-placeholder {
+    font-weight: bold;
+    color: #888888;
+    font-family: Arial, sans-serif;
 }
