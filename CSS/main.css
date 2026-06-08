@@ -127,3 +127,19 @@ p {
     width: 100%;
     border-top: 1px solid #e0e0e0;
 }
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 70vh; /* Centers the whole block vertically on the screen */
+    padding: 40px 20px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column; /* Stacks title, description, and button neatly */
+    align-items: center;
+    gap: 20px; /* Gives good white space  between elements */
+    max-width: 800px;
+}
