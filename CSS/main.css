@@ -143,3 +143,98 @@ p {
     gap: 20px; /* Gives good white space  between elements */
     max-width: 800px;
 }
+/*Side by side navigation styling  */
+
+/* The outer container that holds Logo, Links, and Search */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* The box with JS-injected links */
+#global-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Nav link styling */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 500;
+    font-family: sans-serif;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+/* Hover effect to mimic your button wireframe fields */
+.nav-links li a:hover, 
+.nav-links li a.active {
+    background-color: #e0e0e0;
+    color: #000000;
+}
+
+/* HAMBURGER STYLING  */
+.hamburger {
+    display: none; /* Invisible on wide screens */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 101;
+}
+
+.hamburger .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #333333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+
+@media screen and (max-width: 768px) {
+    /* Show the hamburger icon on small screens */
+    .hamburger {
+        display: flex;
+    }
+
+    /* mobile menu dropdown */
+    .nav-links {
+        display: none; /* Hides it from sight until toggled */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Sits directly beneath the main navbar bar */
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 20px 0;
+        border-top: 1px solid #e0e0e0;
+        border-bottom: 1px solid #e0e0e0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        text-align: center;
+    }
+
+    /* When  JS clicks the hamburger and adds the "active" class, reveal it */
+    .nav-links.active {
+        display: flex;
+    }
+}

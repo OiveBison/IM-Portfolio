@@ -9,3 +9,116 @@ h2 {
 .welcome-text {
    margin: 60px ;
 }
+/*ABOUT PAGE LAYOUT SYSTEM */
+
+/* Outside container wraps both left and right blocks */
+.about-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    gap: 50px; /* white space between columns */
+    align-items: flex-start;
+}
+
+/* LEFT COLUMN: Controls text layout pacing */
+.about-content-left {
+    flex: 1.2; /* Takes up slightly more proportional space */
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.about-bio h2 {
+    font-size: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    color: #111111;
+}
+
+.about-bio p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444444;
+    margin-bottom: 15px;
+}
+
+/* Skills Grid Section */
+.about-skills h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+.skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Individual Skill Cards styling */
+.skill-card {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    padding: 15px 20px;
+    border-radius: 6px;
+}
+
+.skill-card h4 {
+    margin: 0 0 5px 0;
+    color: #111111;
+    font-size: 16px;
+}
+
+.skill-card p {
+    margin: 0;
+    color: #666666;
+    font-size: 14px;
+}
+
+/* RIGHT COLUMN= The Creative Showcase Window Frame */
+.about-media-right {
+    flex: 1; /* Symmetrical balance frame */
+    position: sticky;
+    top: 40px; /* Keeps the illustration static in view as the user reads down */
+}
+
+.media-window {
+    width: 100%;
+    min-height: 450px;
+    background-color: #e0e0e0; /* Gray placeholder */
+    border: 2px dashed #999999;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.window-label {
+    font-family: sans-serif;
+    color: #555555;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* MOBILE LAYOUT RULES  */
+@media screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Flips horizontal layout to a clean vertical stack */
+        gap: 30px;
+        margin: 20px auto;
+    }
+    
+    .about-media-right {
+        position: static; /* Removes sticky setting on mobile screen spaces */
+        width: 100%;
+        order: -1; /* Quickly moves the illustration block to the top of the screen */
+    }
+    
+    .media-window {
+        min-height: 300px;
+    }
+}
