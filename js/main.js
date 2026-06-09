@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // 2. Activate the works page filtering system
     setupProjectFilters();
+    
+    //3.Activate the contact form validation engine
+    setupFormValidation();
 });
 
 
@@ -41,7 +44,7 @@ function setupHamburgerMenu() {
 }
 
 
-// INTERACTION 2: WORKS Filter System
+// Interaction 2: WORKS Filter System
 
 function setupProjectFilters() {
     const buttons = document.querySelectorAll(".filter-btn");
@@ -69,5 +72,43 @@ function setupProjectFilters() {
                 }
             });
         });
+    });
+}
+
+//Interaction 3: Form Validation and error message
+function setupFormValidation() {
+    const form = document.getElementById("contactForm");
+    const errorDiv = document.getElementById("error-message");
+
+    // Safety check: stop immediately if we aren't on the contact page
+    if (!form || !errorDiv) return;
+
+    form.addEventListener("submit", (event) => {
+        const name = document.getElementById("fullName").value.trim();
+        const email = document.getElementById("emailInput").value.trim();
+        const message = document.getElementById("messageInput").value.trim();
+        
+        let errors = [];
+
+        // 1. Simple validation checks
+        if (name.length < 3) {
+            errors.push("Please enter your full name and surname.");
+        }
+        if (message.length < 10) {
+            errors.push("Your message must be at least 10 characters long.");
+        }
+
+        // 2. Check if errors exist
+        if (errors.length > 0) {
+            event.preventDefault(); // Stop form from submitting or refreshing page
+            errorDiv.innerHTML = errors.join("<br>"); // Display errors neatly
+            errorDiv.style.color = "#ff4d4d"; //  red style reminder
+        } else {
+            // Successful! 
+            event.preventDefault(); // Stop actual server submit for prototype purposes
+            errorDiv.innerHTML = "Message sent successfully! Thank you.";
+            errorDiv.style.color = "#2ecc71"; // Change text color to green
+            form.reset(); // Clear the form fields
+        }
     });
 }
